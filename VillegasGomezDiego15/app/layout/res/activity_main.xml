@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ScientificCalculatorActivity">
+ 
+    <LinearLayout
+        android:id="@+id/calculator_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/colorBg"
+        android:orientation="vertical">
+ 
+        <ImageView
+            android:id="@+id/toggle_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_menu" />
+ 
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/google_sans_family"
+            android:layout_weight="2"
+            android:padding="8dp"
+            android:gravity="end|center"
+            android:textColor="@android:color/white"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            tools:text="0" />
+ 
+        <TextView
+            android:id="@+id/keys_pressed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/google_sans_family"
+            android:gravity="end|center"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:padding="8dp"
+            android:maxLines="1"
+            tools:text="0" />
+ 
+    </LinearLayout>
+ 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculator_view">
+ 
+        <RelativeLayout
+            android:id="@+id/calculator_key_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+ 
+            <LinearLayout
+                android:id="@+id/row_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_percent"
+                    style="@style/stylish"
+                    android:text="%" />
+ 
+ 
+                <TextView
+                    android:id="@+id/key_open_bracket"
+                    style="@style/stylish"
+                    android:text="(" />
+ 
+ 
+                <TextView
+                    android:id="@+id/key_close_bracket"
+                    style="@style/stylish"
+                    android:text=")" />
+ 
+ 
+                <TextView
+                    android:id="@+id/key_divide_operation"
+                    style="@style/arithmetic_keys"
+                    android:text="÷" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_one_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_one" />
+ 
+            <LinearLayout
+                android:id="@+id/row_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_one_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_seven"
+                    style="@style/stylish"
+                    android:text="7" />
+ 
+                <TextView
+                    android:id="@+id/key_eight"
+                    style="@style/stylish"
+                    android:text="8" />
+ 
+                <TextView
+                    android:id="@+id/key_nine"
+                    style="@style/stylish"
+                    android:text="9" />
+ 
+                <TextView
+                    android:id="@+id/key_multiply_operation"
+                    style="@style/arithmetic_keys"
+                    android:text="x" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_two_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_two" />
+ 
+            <LinearLayout
+                android:id="@+id/row_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_two_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_four"
+                    style="@style/stylish"
+                    android:text="4" />
+ 
+                <TextView
+                    android:id="@+id/key_five"
+                    style="@style/stylish"
+                    android:text="5" />
+ 
+                <TextView
+                    android:id="@+id/key_six"
+                    style="@style/stylish"
+                    android:text="6" />
+ 
+                <TextView
+                    android:id="@+id/key_subtract_operation"
+                    style="@style/arithmetic_keys"
+                    android:text="-" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_three_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_three"/>
+ 
+            <LinearLayout
+                android:id="@+id/row_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_three_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_one"
+                    style="@style/stylish"
+                    android:text="1" />
+ 
+                <TextView
+                    android:id="@+id/key_two"
+                    style="@style/stylish"
+                    android:text="2" />
+ 
+                <TextView
+                    android:id="@+id/key_three"
+                    style="@style/stylish"
+                    android:text="3" />
+ 
+                <TextView
+                    android:id="@+id/key_addition_operation"
+                    style="@style/arithmetic_keys"
+                    android:text="+" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_four_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_four"/>
+ 
+            <LinearLayout
+                android:id="@+id/row_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_four_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_zero"
+                    style="@style/stylish"
+                    android:text="0" />
+ 
+                <TextView
+                    android:id="@+id/key_dot"
+                    style="@style/stylish"
+                    android:text="." />
+ 
+                <TextView
+                    android:id="@+id/key_delete"
+                    style="@style/stylish"
+                    android:text="⌫" />
+ 
+                <TextView
+                    android:id="@+id/key_cls"
+                    android:visibility="gone"
+                    style="@style/stylish"
+                    android:text="CLS" />
+ 
+                <TextView
+                    android:id="@+id/key_submission_operation"
+                    style="@style/arithmetic_keys"
+                    android:text="=" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_five_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_five"/>
+ 
+            <LinearLayout
+                android:id="@+id/row_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_five_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_rad_operation"
+                    style="@style/stylish"
+                    android:textSize="20sp"
+                    android:text="RAD" />
+ 
+                <TextView
+                    android:id="@+id/key_sin_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="sin" />
+ 
+                <TextView
+                    android:id="@+id/key_cos_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="cos" />
+ 
+                <TextView
+                    android:id="@+id/key_tan_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="tan" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_six_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_six" />
+ 
+            <LinearLayout
+                android:id="@+id/row_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_six_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_pi_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="π" />
+ 
+                <TextView
+                    android:id="@+id/key_asin_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="asin" />
+ 
+                <TextView
+                    android:id="@+id/key_acos_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="acos" />
+ 
+                <TextView
+                    android:id="@+id/key_atan_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="atan" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_seven_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_seven" />
+ 
+            <LinearLayout
+                android:id="@+id/row_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_seven_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_raised_pwr_minus_one_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="x\u207B\u00B9" />
+ 
+                <TextView
+                    android:id="@+id/key_raised_pwr_two_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="x²" />
+ 
+                <TextView
+                    android:id="@+id/key_raised_pwr_three_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="x\u00B3" />
+ 
+                <TextView
+                    android:id="@+id/key_raised_pwr_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="x\u2303" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_eight_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_eight" />
+ 
+            <LinearLayout
+                android:id="@+id/row_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_eight_view"
+                android:orientation="horizontal">
+ 
+                <TextView
+                    android:id="@+id/key_log_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="log" />
+ 
+                <TextView
+                    android:id="@+id/key_lg_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="lg" />
+ 
+                <TextView
+                    android:id="@+id/key_ln_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="ln" />
+ 
+                <TextView
+                    android:id="@+id/key_e_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="e" />
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_nine_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_nine" />
+ 
+            <LinearLayout
+                android:id="@+id/row_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_nine_view"
+                android:orientation="horizontal">
+ 
+                <ImageView
+                    style="@style/stylish"
+                    android:src="@drawable/ic_arrow_down_black_24dp" />
+ 
+                <TextView
+                    android:id="@+id/key_sqrroot_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="√" />
+ 
+                <TextView
+                    android:id="@+id/key_cuberoot_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="\u221B" />
+ 
+                <TextView
+                    android:id="@+id/key_factorial_operation"
+                    style="@style/stylish"
+                    android:textSize="24sp"
+                    android:text="n!" />
+ 
+            </LinearLayout>
+ 
+            <View
+                android:id="@+id/row_ten_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/row_nine" />
+ 
+        </RelativeLayout>
+ 
+    </ScrollView>
+ 
+</RelativeLayout>

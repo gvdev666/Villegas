@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView android:id="@+id/simpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre oficial: República Francesa
+- Capital: París
+- Ciudades principales: París, Marsella, Lyon, Toulouse, Niza, Nantes, Estrasburgo, Montpellier, Burdeos, Rennes, Le Havre, Reims y Lille
+
+- Población: 66,9 millones de habitantes (el 1 de enero de 2017)
+- Superficie: 675 417 km2, 552 000 km2 en la Francia continental. Es el país más extenso de Europa Occidental (con cerca de 1/5 de la superficie de la UE) y cuenta con una gran zona marítima (zona económica exclusiva que cubre 11 millones de kilómetros cuadrados, la segunda más grande del mundo).
+- Moneda: Euro
+- Lengua oficial: Francés
+- Fiesta nacional: 14 de julio
+- Sistema de gobierno: República multipartidista. Democracia parlamentaria
+- Fronteras terrestres: Andorra, España, Bélgica, Luxemburgo, Alemania, Suiza, Italia y Mónaco
+
+- Relieve
+
+• Llanuras: los 2/3 de la superficie total.
+
+• Principales macizos montañosos: los Alpes (cuya cumbre más alta, el Mont-Blanc, es la más salta de Europa Occidental con 4 808 metros de altitud), los Pirineos, el Jura, el Macizo Central y los Vosgos.
+
+• Costas: la Francia continental está abierta a 4 espacios marítimos (mar del Norte, canal de la Mancha, océano Atlántico y mar Mediterráneo) y cuenta con 5500 km de costa.
+
+- Clima
+
+oceánico (Oeste),
+mediterráneo (Sur),
+continental (centro y Este).
+
+- Entorno
+
+• Las zonas de producción agrícola y forestal ocupan una superficie de 48 millones de hectáreas, el 82 % del territorio continental.
+
+• La masa forestal representa el 28,6 % del territorio y es la tercera de la UE detrás de la de Suecia y la de Finlandia. La superficie boscosa se ha duplicado desde 1850.
+
+• Hay 136 especies de árboles registradas en Francia, algo excepcional para un país europeo, y el número de animales grandes va creciendo: en 20 años, la población de ciervos se ha duplicado y la de corzos se ha triplicado.
+
+La República Francesa se compone de:
+
+• la Francia metropolitana, continental, (dividida en 13 regiones y en 96 departamentos),
+
+• 5 departamentos y regiones de ultramar (DROM): Guadalupe, Martinica, Guayana Francesa, Reunión, Mayotte,
+
+• 5 colectividades de ultramar: Polinesia Francesa, Wallis y Futuna, San Pedro y Miquelón,
+
+• 2 colectividades sui generis: Nueva Caledonia y las Tierras Australes y Antárticas Francesas." />
+</android.support.constraint.ConstraintLayout>

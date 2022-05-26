@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView android:id="@+id/simpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estados Unidos es la federación más antigua del mundo. Es una república constitucional, democrática y representativa, "en la que el mandato de la mayoría es regulado por los derechos de las minorías, protegidos por la ley".63​ El gobierno está regulado por un sistema de controles y equilibrios, definidos por la Constitución, que sirve como el documento legal supremo del país.64​ En el sistema federalista estadounidense, los ciudadanos están generalmente sujetos a tres niveles de gobierno: federal, estatal y local; los deberes del gobierno local comúnmente se dividen entre los gobiernos de los condados y municipios. En casi todos los casos, los funcionarios del poder ejecutivo y legislativo son elegidos por sufragio directo de los ciudadanos del distrito." />
+</android.support.constraint.ConstraintLayout>
